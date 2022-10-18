@@ -1,2 +1,8 @@
 # dashboard machine IOT
-Require esp 32 
+Require
+- mysql
+- esp 32
+- relay 
+- etc . . .
+
+Folder Testo for dashboard
