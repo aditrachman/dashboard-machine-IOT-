@@ -4,16 +4,16 @@ include 'conn/koneksi.php';
 
 //$dayofyear = 168;
 $dayofyear = date("z")+1; 
-$output_mesin1_a = mysqli_query($koneksi,"SELECT * FROM mesin1_a where DAYOFYEAR(time)=$dayofyear");
-$output_mesin2_a = mysqli_query($koneksi,"SELECT * FROM mesin2_a where DAYOFYEAR(time)=$dayofyear");
-$output_mesin3_b = mysqli_query($koneksi,"SELECT * FROM mesin3_b where DAYOFYEAR(time)=$dayofyear");
-$output_mesin4_a = mysqli_query($koneksi,"SELECT * FROM mesin4_a where DAYOFYEAR(time)=$dayofyear");
-$output_mesin4_b = mysqli_query($koneksi,"SELECT * FROM mesin4_b where DAYOFYEAR(time)=$dayofyear");
-$output_mesin5_a = mysqli_query($koneksi,"SELECT * FROM mesin5_a where DAYOFYEAR(time)=$dayofyear");
-$output_mesin5_b = mysqli_query($koneksi,"SELECT * FROM mesin5_b where DAYOFYEAR(time)=$dayofyear");
-$output_mesin5_c = mysqli_query($koneksi,"SELECT * FROM mesin5_c where DAYOFYEAR(time)=$dayofyear");
-$output_mesin5_d = mysqli_query($koneksi,"SELECT * FROM mesin5_d where DAYOFYEAR(time)=$dayofyear");
-$output_mesin6_a = mysqli_query($koneksi,"SELECT * FROM mesin6_a where DAYOFYEAR(time)=$dayofyear");
+$output_mesin1_a = mysqli_query($koneksi,"SELECT * FROM mesin1_a where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin2_a = mysqli_query($koneksi,"SELECT * FROM mesin2_a where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin3_b = mysqli_query($koneksi,"SELECT * FROM mesin3_b where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin4_a = mysqli_query($koneksi,"SELECT * FROM mesin4_a where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin4_b = mysqli_query($koneksi,"SELECT * FROM mesin4_b where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin5_a = mysqli_query($koneksi,"SELECT * FROM mesin5_a where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin5_b = mysqli_query($koneksi,"SELECT * FROM mesin5_b where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin5_c = mysqli_query($koneksi,"SELECT * FROM mesin5_c where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin5_d = mysqli_query($koneksi,"SELECT * FROM mesin5_d where (DAYOFYEAR(time)=$dayofyear && qty=1)");
+$output_mesin6_a = mysqli_query($koneksi,"SELECT * FROM mesin6_a where (DAYOFYEAR(time)=$dayofyear && qty=1)");
 
 $jumlah_output_mesin1_a = mysqli_num_rows($output_mesin1_a);
 $jumlah_output_mesin2_a = mysqli_num_rows($output_mesin2_a);
